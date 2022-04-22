@@ -1,0 +1,17 @@
+Иерархия наследования и преобразование типов
+Upcasting - сначала указываем родительский класс, а потом дочерний при создании объекта
+-- Person tom = new Client();
+-- Person tom2 = new Employee();
+
+Downcasting - (сначала дочерний, потом родительский)
+    SOS(не всегда верно) - DON'T WORK THIS METHOD, BECAUSE IT'S WRONG APPROACH
+-- Client tom = new Person();
+-- Employee tom2 = new Person();
+
+
+Object sam = new Employee("Sam");
+
+// нисходящее преобразование от Object к типу Employee
+Employee emp = (Employee) sam;
+emp.display();
+System.out.println(emp.getCompany());
